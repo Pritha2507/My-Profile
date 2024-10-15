@@ -22,6 +22,47 @@
 	<meta name="twitter:card" content="" />
 
 	<link rel="shortcut icon" href="images/christ_logo_color_circular.png" type="image/x-icon">
+	<style>
+        .author-img {
+            width: 150px; /* Adjust width as needed */
+            height: 150px; /* Adjust height as needed */
+            background-image: url(images/Profile.jpg);
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+            transition: transform 0.3s ease; /* Smooth transition */
+        }
+
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 80%; /* Image max width */
+            max-height: 80%; /* Image max height */
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
 
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
@@ -47,6 +88,15 @@
 
 	<script src="js/modernizr-2.6.2.min.js"></script>
 
+	<style>
+        /* Style for the active navigation link */
+        #navbar ul li a.active {
+            color: #ff5733; /* Change this color as needed */
+            font-weight: bold; /* Make the active link bold */
+            text-decoration: underline; /* Optional: add underline */
+        }
+    </style>
+
 </head>
 
 <body>
@@ -62,8 +112,25 @@
 				aria-expanded="false" aria-controls="navbar"><i></i></a>
 			<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
 				<div class="text-center">
-					<div class="author-img" style="background-image: url(images/Profile.jpg);"></div>
-					PRITHA CHOUDHURY
+					<div class="author-img" onclick="openModal()"></div>
+
+    <!-- Modal for Enlarged Image -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01" src="images/Profile.jpg" alt="Profile Image">
+    </div>
+
+    <script>
+        function openModal() {
+            const modal = document.getElementById("imageModal");
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
+    </script>
 					<h1 id="colorlib-logo"><a href="index.html">Pritha Choudhury</a></h1>
 					<span class="position"><a
 							href="https://christuniversity.in/departments/yeshwanthpur%20campus/school%20of%20sciences/computer%20science">Master
@@ -72,7 +139,6 @@
 				<nav id="colorlib-main-menu" role="navigation" class="navbar">
 					<div id="navbar" class="collapse">
 						<ul>
-
 							<li><a href="#" data-nav-section="about">About</a></li>
 							<li><a href="#" data-nav-section="skills">Skills</a></li>
 							<li><a href="#" data-nav-section="education">Education</a></li>
@@ -80,10 +146,27 @@
 							<li><a href="#" data-nav-section="internship">Internships</a></li>
 							<li><a href="#" data-nav-section="certificate">Certifications</a></li>
 							<li><a href="#" data-nav-section="contact">Contact</a></li>
-
 						</ul>
-
 					</div>
+				</nav>
+				
+				<script>
+					// Function to set active class on clicked navigation link
+					function setActiveLink(event) {
+						event.preventDefault(); // Prevent default anchor behavior
+				
+						const links = document.querySelectorAll('#navbar ul li a');
+						links.forEach(link => link.classList.remove('active')); // Remove active class
+				
+						event.target.classList.add('active'); // Add active class to clicked link
+					}
+				
+					// Add event listeners to all links
+					document.querySelectorAll('#navbar ul li a').forEach(link => {
+						link.addEventListener('click', setActiveLink);
+					});
+				</script>
+				
 					<a class="brochure-link" href="https://cs-placements.github.io/mds-2023-25/" target="_blank">CLASS
 						2023 - 25</a>
 				</nav>
@@ -127,7 +210,7 @@
 								<div class="row">
 									<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
 										<!-- Edit google drive Link -->
-										<a href="https://drive.google.com/file/d/1kqY6Nv6aod5HtZvqNzBKmRlqESr5cJos/view?usp=drive_link"
+										<a href="Pritha Choudhury_Resume_Data_Science.pdf"
 											target="_blank">
 											<div class="services color-4">
 												<span class="icon2">
@@ -256,7 +339,7 @@
 									<div class="progress">
 										<div class="progress-bar color-2" role="progressbar" aria-valuenow="80%"
 											aria-valuemin="0" aria-valuemax="100" style="width:80%">
-											<span>85%</span>
+											<span>80%</span>
 										</div>
 									</div>
 								</div>
@@ -268,7 +351,7 @@
 									<div class="progress">
 										<div class="progress-bar color-3" role="progressbar" aria-valuenow="85"
 											aria-valuemin="0" aria-valuemax="100" style="width:85%">
-											<span>85%</span>
+											<span>75%</span>
 										</div>
 									</div>
 								</div>
@@ -291,18 +374,6 @@
 									<div class="progress">
 										<div class="progress-bar color-2" role="progressbar" aria-valuenow="95"
 											aria-valuemin="0" aria-valuemax="100" style="width:95%">
-											<span>85%</span>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-								<div class="progress-wrap">
-									<h3>Power BI</h3>
-									<div class="progress">
-										<div class="progress-bar color-2" role="progressbar" aria-valuenow="82"
-											aria-valuemin="0" aria-valuemax="100" style="width:82%">
 											<span>85%</span>
 										</div>
 									</div>
@@ -377,7 +448,7 @@
 												<div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
 													aria-labelledby="headingThree">
 													<div class="panel-body">
-														<p>Completed my B.Sc. from Gurucharan College, Silchar(Affiliated to Assam University, Silchar)
+														<p>Completed my B.Sc. from Gurucharan College, Silchar(Affiliated to Assam University, Silchar) with 88.72%(Honours) and 88.04%(Overall).
 														</p>
 													</div>
 												</div>
@@ -396,8 +467,8 @@
 												<div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
 													aria-labelledby="headingFour">
 													<div class="panel-body">
-														<p>Completed my Class 12 from <strong>Don Bosco H.S. School, Silchar</strong>, with Physics, Chemisty,
-															Mathematics, Biology and Physical Education as subjects and graduated with 88%!.
+														<p>Completed from <strong>Don Bosco H.S. School, Silchar</strong>, with Physics, Chemisty,
+															Mathematics, Biology and Physical Education as subjects and graduated with 88%.
 														</p>
 													</div>
 												</div>
@@ -612,44 +683,41 @@
 						</div>
 						<div class="row">
 							<div class="col-md-10">
-								<div class="colorlib-feature colorlib-feature-sm animate-box"
-									data-animate-effect="fadeInLeft">
+								<!-- Email Section -->
+								<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
 									<div class="colorlib-icon">
-										<i class="icon-globe-outline"></i>
+										<i class="icon-globe-outline"></i> <!-- Original icon class for email -->
 									</div>
 									<div class="colorlib-text">
-										<!-- Edit your mail id -->
-										<p><a href="#">prithachoudhury123@gmail.com</a></p>
+										<!-- Email Link -->
+										<p><a href="mailto:prithachoudhury123@gmail.com">Send Email</a></p>
 									</div>
 								</div>
-
-								<div class="colorlib-feature colorlib-feature-sm animate-box"
-									data-animate-effect="fadeInLeft">
+						
+								<!-- Address Section -->
+								<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
 									<div class="colorlib-icon">
-										<i class="icon-map"></i>
+										<i class="icon-map"></i> <!-- Original icon class for address -->
 									</div>
 									<div class="colorlib-text">
-										<!-- Edit your contact address -->
+										<!-- Contact Address -->
 										<div class="addresses">
-											<p class="address-divider">Christ [Deemed to be University], HMT Layout, Nagasandara Post
-												Bangalore - 560073</p>
-											<p>Silchar, Assam</p>
+											<p class="address-divider">HMT Layout, Nagasandara Post, Bangalore - 560073</p>
+											<p>Tarapur, Silchar, Assam - 788003</p>
 										</div>
 									</div>
 								</div>
-
-								<!-- Edit your contact address or you can remove this div -->
-								<div class="colorlib-feature colorlib-feature-sm animate-box"
-									data-animate-effect="fadeInLeft">
-									<div class="colorlib-icon">
-										<i class="icon-phone"></i>
-									</div>
-									<div class="colorlib-text">
-										<p><a href="tel: 8553441091">+91 6003512285</a></p>
-									</div>
+						
+								<!-- Phone Section -->
+								<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+									<!-- Phone Number Link -->
+									<p><a href="tel:+916003512285">+91 6003512285</a></p>
 								</div>
-
 							</div>
+								
+							</div>
+						</div>
+						
 
 						</div>
 					</div>
