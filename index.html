@@ -148,6 +148,7 @@
 							<li><a href="#" data-nav-section="contact">Contact</a></li>
 						</ul>
 					</div>
+					<a class="brochure-link" href="https://cs-placements.github.io/mds-2023-25/" target="_blank">CLASS 2023 - 25</a>
 				</nav>
 				
 				<script>
@@ -156,9 +157,9 @@
 						event.preventDefault(); // Prevent default anchor behavior
 				
 						const links = document.querySelectorAll('#navbar ul li a');
-						links.forEach(link => link.classList.remove('active')); // Remove active class
+						links.forEach(link => link.classList.remove('active')); // Remove active class from all links
 				
-						event.target.classList.add('active'); // Add active class to clicked link
+						event.currentTarget.classList.add('active'); // Add active class to clicked link
 					}
 				
 					// Add event listeners to all links
@@ -166,6 +167,7 @@
 						link.addEventListener('click', setActiveLink);
 					});
 				</script>
+				
 				
 					<a class="brochure-link" href="https://cs-placements.github.io/mds-2023-25/" target="_blank">CLASS
 						2023 - 25</a>
@@ -300,7 +302,8 @@
 									<div class="desc">
 										<!-- Edit content for your specialization -->
 										<h3>Domain Expertise</h3>
-										<p>Finance Domain</p>
+										<p>Finance<br>
+										   Domain</p>
 									</div>
 								</div>
 							</div>
@@ -426,11 +429,12 @@
 												<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
 													aria-labelledby="headingTwo">
 													<div class="panel-body">
-														<p>Currently pursuing my IV TRIMESTER M.Sc.(Data Science) at <strong>Christ University, Bangalore</strong></p>
+														<p>Currently pursuing my V TRIMESTER M.Sc.(Data Science) at <strong>Christ University, Bangalore.</strong></p>
 														<ul>
-															<li>TRIMESTER I 3.66GPA</li>
-															<li>TRIMESTER II 3.76 GPA </li>
-															<li>TRIMESTER III 3.54 GPA </li>
+															<li>TRIMESTER I - 78.73%</li>
+															<li>TRIMESTER II - 77.4%</li>
+															<li>TRIMESTER III - 72.9%</li>
+															<li>TRIMESTER IV - 76%</li>
 														</ul>
 													</div>
 												</div>
@@ -468,7 +472,7 @@
 													aria-labelledby="headingFour">
 													<div class="panel-body">
 														<p>Completed from <strong>Don Bosco H.S. School, Silchar</strong>, with Physics, Chemisty,
-															Mathematics, Biology and Physical Education as subjects and graduated with 88%.
+															Mathematics, Biology and Physical Education as subjects and graduated with 88% .
 														</p>
 													</div>
 												</div>
@@ -487,7 +491,7 @@
 												<div id="collapseFive" class="panel-collapse collapse" role="tabpanel"
 													aria-labelledby="headingFive">
 													<div class="panel-body">
-														<p>Passed out from<strong> Don Bosco H.S. School, Silchar</strong>, in 2017 with 10 CGPA!.</p>
+														<p>Passed out from<strong> Don Bosco H.S. School, Silchar</strong>, in 2017 with 10 CGPA .</p>
 													</div>
 												</div>
 											</div>
@@ -520,9 +524,8 @@
 									<div class="desc">
 										<!-- Edit content for your specialization -->
 										<h3>Diabetes Prediction Website</h3>
-										<p>2022 Ukraine Russia War Exploratory Data Analysis, Analysis was done on the
-											day 167 of the war</p>
-										<p id="project-tool">Tableau | Power BI | Advance Excel | Python</p>
+										<p>Developed a Flask web application for diabetes risk prediction using a KNN model with 80% accuracy. The app provides real-time predictions and features a user-friendly interface for efficient form submissions. Integrated model performance monitoring to enhance predictive insights and overall user experience.</p>
+										<p id="project-tool">Python | Machine Learning</p>
 									</div>
 								</div>
 							</div>
@@ -538,9 +541,8 @@
 									<div class="desc">
 										<!-- Edit content for your specialization -->
 										<h3>BizBot</h3>
-										<p>Used different varieties of gas sensors to detect spoilt food based on
-											concentration of gases produced by decaying food.</p>
-										<p id="project-tool">IoT | C++ | Arduino</p>
+										<p>Developed a web application leveraging NLP and LLM for a chatbot interface to automate data visualization and predictive analysis. The platform enables businesses to create insightful dashboards, enhancing decision-making and operational efficiency.</p>
+										<p id="project-tool">LLM | Machine Learning | Visualization</p>
 									</div>
 								</div>
 							</div>
@@ -553,6 +555,12 @@
 											<i class="icon-github"></i>
 										</span>
 									</a>
+									<div class="desc">
+										<!-- Edit content for your specialization -->
+										<h3>Recommendation Systems</h3>
+										<p>Developed a user-based recommender system using Apache Mahout, achieving an RMSE of 0.9991 and MAE of 0.7907, indicating strong model performance. Implemented precision metrics to deliver personalized item recommendations, enhancing user engagement through collaborative filtering techniques.</p>
+										<p id="project-tool">Machine Learning | JAVA</p>
+									</div>
 								</div>
 							</div>
 
@@ -581,7 +589,10 @@
 											<div class="timeline-label" , style="background: #e5edf4;">
 												<h2><a href="#">Feynn Labs Services</a> <span> </span></h2>
 												<p id="project-tool">[May, 2024 - July, 2024]</p>
-												<p>In this internship I performed Market Segmentation Analysis and worked on an AI product.</p>
+												<p> - Enhanced market segmentation by implementing PCA and K-means clustering, accurately identifying 4 distinct
+													customer segments with a 20% improvement in segmentation accuracy.<br>
+													- Achieved an adjusted Rand index of 0.85 for segmentation stability and visualized segment metrics, improving
+													market entry strategy precision.</p>
 												<p id="project-tool">Python | Machine Learning</p>
 											</div>
 										</div>
@@ -621,10 +632,9 @@
 											</div>
 											<!-- Edit content based on your Certifications -->
 											<div class="timeline-label">
-												<h2><a href="#">Tableau, Power BI, SQL, MongoDB</a> <span> </span></h2>
-												<p id="project-tool">~ from Coursera [IIT Madras]</p>
-												<p>Certifed by learnbay online learning platform for using data
-													visualization tools and handling data with SQL and NoSQL skills.</p>
+												<h2><a href="#">Introduction to Natural Language Processing</a> <span> </span></h2>
+												<p id="project-tool">~ from Infosys Springboard</p>
+												<p>This course helped in acquiring skills in NLP, text analysis, and machine learning.</p>
 											</div>
 										</div>
 									</article>
@@ -636,9 +646,9 @@
 												<i class="icon-pen2"></i>
 											</div>
 											<div class="timeline-label">
-												<h2><a href="#">Python Programming</a> <span></span></h2>
+												<h2><a href="#">Introduction to Artificial Intelligence</a> <span></span></h2>
 												<p id="project-tool">~ from Infosys Springboard</p>
-												<p>Have been certifed for python language at intermidiate level</p>
+												<p>This course offered an introduction to Artificial Intelligence through practical use cases and real-life examples. It provided an overview of key AI concepts and explored foundational machine learning techniques that form the core of AI.</p>
 											</div>
 										</div>
 									</article>
@@ -650,10 +660,9 @@
 												<i class="icon-pen2"></i>
 											</div>
 											<div class="timeline-label">
-												<h2><a href="#">Introduction to AI and NLP</a> <span></span></h2>
-												<p id="project-tool">~ from Google | Microsoft</p>
-												<p>Infosys Springboard has been best opensource platform to get my
-													fundamentals developed in field of Artificial Intelligence</p>
+												<h2><a href="#">Programming with Python</a> <span></span></h2>
+												<p id="project-tool">~ from Internshala</p>
+												<p>Successfully completed a 6 weeks online certified training on Programming with Python. The training consisted of Introduction to Python, Using Variables in Python, Basics of Programming in Python, Principles of Object-oriented Programming (OOP), Connecting to SQLite Database, Developing a GUI with PyQT, Application of Python in Various Disciplines, and The Final Project modules.</p>
 											</div>
 										</div>
 									</article>
@@ -710,9 +719,13 @@
 						
 								<!-- Phone Section -->
 								<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-									<!-- Phone Number Link -->
-									<p><a href="tel:+916003512285">+91 6003512285</a></p>
+									<p>
+										<a href="tel:+916003512285">
+											<i class="fas fa-phone"></i> +91 6003512285
+										</a>
+									</p>
 								</div>
+								
 							</div>
 								
 							</div>
